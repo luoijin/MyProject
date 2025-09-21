@@ -87,12 +87,22 @@ nav a:hover{
     transition: background-color 0.2s ease;
     cursor: pointer;
     z-index: 999;
-
+    text-decoration: none;
 }
+
+
 
 .btn-signing:hover {
     background-color: white;
+}
 
+a.btn-signing,
+a.btn-signing:link,
+a.btn-signing:visited,
+a.btn-signing:hover,
+a.btn-signing:active {
+    text-decoration: none;
+    color: black; 
 }
 
 /* MAIN CONTENT */
@@ -190,6 +200,7 @@ main {
 
 .btn-signing-main:hover {
     background-color: gray;
+    text-decoration: none;
 }
 
 .robot-3d {
@@ -231,6 +242,7 @@ main {
     
     .btn-signing {
         padding: 0.6rem 1.5rem;
+        text-decoration: none;
     }
 
     .content {
@@ -267,5 +279,38 @@ main {
     .btn-signing-main {
         font-size: 0.8rem;
         padding: 0.8rem 2rem;
+        text-decoration: none;
     }
+}
+
+/* NAVBAR */
+header {
+    position: sticky;
+    top: 0;
+    background: black; 
+    z-index: 1000;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 0.8rem; /* small space between buttons */
+    align-items: center;
+}
+
+.btn-signup {
+    background-color: transparent;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    border: 2px solid #a7a7a7;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-signup:hover {
+    background-color: #a7a7a7;
+    color: black;
 }

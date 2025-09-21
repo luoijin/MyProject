@@ -8,29 +8,21 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
+
+    <?php include 'pages/navbar.php'; ?>
+
     <img class="image-gradient" src="gradient.png" alt="gradient">
     <div class="layer-blur"></div>
 
     <div class="container">
-        <header>
-            <h1 data-aos="fade-down" data-aos-duration="1500" class="logo">MY PROJECT</h1>
-
-            <nav>
-                <a data-aos="fade-down" data-aos-duration="1500" href="#">HOME</a>
-                <a data-aos="fade-down" data-aos-duration="2000" href="#">ABOUT</a>
-                <a data-aos="fade-down" data-aos-duration="2500" href="#">CONTACT</a>
-            </nav>
-
-            <button data-aos="fade-down" data-aos-duration="1500" class="btn-signing">SIGN IN</button>
-        </header>
-
+        
         <main>
             <div class="content">
                 <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" data-aos-duration="1500" class="tag-box">
                     <div class="tag">ANNE LORAINE PARDILLO</div>
                 </div>
 
-                <h1 data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" data-aos-duration="2000">LOREM<br>IPSUM, DOLOR</h1>
+                <h1 data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" data-aos-duration="2000">Hi, it's Loraine<br>I'm a Developer</h1>
                 <p data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" data-aos-duration="2500" class="description">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt nisi, sequi laboriosam ullam odio adipisci magni distinctio, quo iste esse amet optio quae facilis pariatur veritatis asperiores corrupti! Et.
                 </p>
@@ -51,6 +43,8 @@
     <script>
         AOS.init();
     </script>
+
+    <script src="navbar.js"></script>
 
         
 

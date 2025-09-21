@@ -225,7 +225,7 @@ main {
     }
 }
 
-/* MOBILE RESPOSIVE PUYD ?! */
+/* MOBILE RESPOSIVE PUD ?! */
 
 @media (max-width: 768px) {
     header {
@@ -293,7 +293,7 @@ header {
 
 .auth-buttons {
     display: flex;
-    gap: 0.8rem; /* small space between buttons */
+    gap: 0.8rem; 
     align-items: center;
 }
 

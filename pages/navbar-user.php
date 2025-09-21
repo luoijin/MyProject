@@ -1,4 +1,3 @@
-<!-- navbar.php -->
 <header>
     <h1 class="logo">MY PROJECT</h1>
     <nav>

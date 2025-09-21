@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Only redirect if user is actually logged in AND authenticated
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && isset($_SESSION['user'])) {
     header("Location: protected-page.php");
     exit();
@@ -24,7 +23,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && isset($_
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: calc(70vh - 1px); /* subtract navbar height */
+      min-height: calc(70vh - 1px); 
     }
     .card {
         background-color: #1e1e1e;
@@ -46,21 +45,14 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && isset($_
 
   <?php include 'navbar.php'; ?>
 
-  <!-- Centered Login -->
   <div class="login-wrapper">
     <div class="card p-4 shadow-lg" style="width: 350px;">
         <h2 class="text-center mb-3">Login</h2>
-        
-        <!-- Success/Info Messages
-        <?php if (isset($_GET['success']) && $_GET['success'] === 'registered'): ?>
-            <div class="alert alert-success">Registration successful! Please login.</div>
-        <?php endif; ?> -->
         
         <?php if (isset($_GET['message']) && $_GET['message'] === 'logged_out'): ?>
             <div class="alert alert-info">You have been logged out successfully.</div>
         <?php endif; ?>
         
-        <!-- Error Messages -->
         <?php if (isset($_GET['error'])): ?>
             <?php if ($_GET['error'] === 'invalid'): ?>
                 <div class="alert alert-danger">Invalid username or password.</div>

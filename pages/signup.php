@@ -24,7 +24,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && isset($_
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: calc(90vh - 1px); /* subtract navbar height */
+      min-height: calc(90vh - 1px); 
     }
     .card {
         background-color: #1e1e1e;
@@ -33,7 +33,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && isset($_
         box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     }
     .btn-custom {
-      background-color: #1E90FF; /* Bootstrap success green */
+      background-color: #1E90FF; 
       color: white;
       transition: 0.3s;
     }
@@ -49,18 +49,15 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && isset($_
 
   <?php include 'navbar.php'; ?>
 
-  <!-- Centered Signup -->
   <div class="signup-wrapper">
     <div class="card p-4 shadow-lg" style="width: 400px;">
         <h2 class="text-center mb-3">Sign Up</h2>
         
-        <!-- Error Message -->
         <?php if (isset($_GET['error']) && $_GET['error'] === 'invalidrequest'): ?>
             <div class="alert alert-danger">Invalid request.</div>
         <?php endif; ?>
         
         <form action="../process/signup-process.php" method="post" onsubmit="return validatePasswords()">        
-        <!-- First & Last Name (side by side) -->
         <div class="row">
           <div class="col-md-6 mb-3">
             <label class="form-label">First Name</label>
@@ -78,13 +75,11 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && isset($_
           </div>
         </div>
 
-        <!-- Username -->
         <div class="mb-3">
           <label class="form-label">Username</label>
           <input type="text" name="username" class="form-control" required>
         </div>
 
-        <!-- Email -->
         <div class="mb-3">
           <label class="form-label">Email</label>
           <input type="email" name="email" class="form-control" required
@@ -92,7 +87,6 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && isset($_
                  oninput="this.setCustomValidity('')">
         </div>
 
-        <!-- Password -->
         <div class="mb-3">
           <label class="form-label">Password</label>
           <input type="password" id="password" name="password" 
@@ -106,7 +100,6 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && isset($_
           </div>
         </div>
 
-        <!-- Confirm Password -->
         <div class="mb-3">
           <label class="form-label">Confirm Password</label>
           <input type="password" id="confirm_password" class="form-control" required>
@@ -134,7 +127,6 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && isset($_
         return true;
     }
     
-    // Real-time password matching validation
     document.getElementById('confirm_password').addEventListener('input', function() {
         const password = document.getElementById('password').value;
         const confirmPassword = this.value;

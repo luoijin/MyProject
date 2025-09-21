@@ -8,7 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email     = htmlspecialchars($_POST['email']);
     $password  = htmlspecialchars($_POST['password']);
 
-    // Save new user in session (temporary storage) but DON'T log them in
     $_SESSION['user'] = [
         'firstname' => $firstname,
         'lastname'  => $lastname,
@@ -17,11 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'password'  => $password
     ];
 
-    // CRITICAL: Make sure user is NOT logged in after signup
     $_SESSION['logged_in'] = false;
-    // Alternative: unset($_SESSION['logged_in']);
 
-    // Show success message first, then redirect to login
     echo "<!DOCTYPE html>
     <html lang='en'>
     <head>
